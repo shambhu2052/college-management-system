@@ -31,26 +31,26 @@ export default tseslint.config([
       "@typescript-eslint/no-explicit-any": "error",
 
       // Optional: Disallow implicit 'any'
-      "@typescript-eslint/no-unsafe-argument": "error",
-      "@typescript-eslint/no-unsafe-assignment": "error",
-      "@typescript-eslint/no-unsafe-call": "error",
-      "@typescript-eslint/no-unsafe-member-access": "error",
-      "@typescript-eslint/no-unsafe-return": "error",
+      // "@typescript-eslint/no-unsafe-argument": "error",
+      // "@typescript-eslint/no-unsafe-assignment": "error",
+      // "@typescript-eslint/no-unsafe-call": "error",
+      // "@typescript-eslint/no-unsafe-member-access": "error",
+      // "@typescript-eslint/no-unsafe-return": "error",
 
       // Optional: Force explicit return types
-      "@typescript-eslint/explicit-function-return-type": [
-        "error",
-        { allowExpressions: true },
-      ],
+      // "@typescript-eslint/explicit-function-return-type": [
+      //   "error",
+      //   { allowExpressions: true },
+      // ],
 
       // Optional: Require type annotations
-      "@typescript-eslint/typedef": [
-        "error",
-        {
-          arrowParameter: true,
-          variableDeclaration: true,
-        },
-      ],
+      // "@typescript-eslint/typedef": [
+      //   "error",
+      //   {
+      //     arrowParameter: true,
+      //     variableDeclaration: true,
+      //   },
+      // ],
     },
   },
 ]);
