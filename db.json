@@ -1,0 +1,13 @@
+{
+  "user": [
+    {
+      "name": "shambhu chaudhary",
+      "email": "shambhu21@gmail.com",
+      "password": "shambhu@123",
+      "confirm-passwor": "shambhu@123",
+      "address": "sadobato",
+      "phone": "981448678",
+      "gender": "Male"
+    }
+  ]
+}
