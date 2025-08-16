@@ -1,0 +1,20 @@
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
+
+export default function PublicRoute({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { isAuth } = useAuth();
+  return (
+    <>
+      {!isAuth ? (
+        <div>{children}</div>
+      ) : (
+        <Navigate to="/app/dashboard" replace />
+      )}
+    </>
+  );
+}

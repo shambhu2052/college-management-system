@@ -29,7 +29,7 @@ export default tseslint.config([
 
       // Disallow explicit 'any' type
       "@typescript-eslint/no-explicit-any": "error",
-
+      "react-refresh/only-export-components": "off",
       // Optional: Disallow implicit 'any'
       // "@typescript-eslint/no-unsafe-argument": "error",
       // "@typescript-eslint/no-unsafe-assignment": "error",

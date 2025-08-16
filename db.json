@@ -6,8 +6,28 @@
       "password": "shambhu@123",
       "confirm-passwor": "shambhu@123",
       "address": "sadobato",
-      "phone": "981448678",
+      "mobile": 981448678,
       "gender": "Male"
+    },
+    {
+      "id": "d9c0",
+      "name": "karan",
+      "email": "karan@gamail.com",
+      "password": "Password@123",
+      "confirm_password": "Password@123",
+      "address": "jdsfks",
+      "gender": "male",
+      "phone": 9814495579
+    },
+    {
+      "id": "4161",
+      "name": "kiran",
+      "email": "kiran@gamail.com",
+      "password": "Password@123",
+      "confirm_password": "Password@123",
+      "address": "jdsfks",
+      "gender": "female",
+      "phone": 9814495579
     }
   ]
 }

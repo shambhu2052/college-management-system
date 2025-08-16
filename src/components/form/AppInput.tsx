@@ -11,12 +11,14 @@ interface AppInputProps<T extends FieldValues> {
   control: Control<T>;
   label: string;
   placeholder: string;
+  type?: string;
 }
 export default function AppInput<T extends FieldValues>({
   name,
   control,
   label,
   placeholder,
+  type = "text",
   ...rest
 }: AppInputProps<T>) {
   return (
@@ -29,9 +31,11 @@ export default function AppInput<T extends FieldValues>({
           <div className="flex flex-col gap-1">
             <Input
               onChange={onChange}
+              type={type}
               value={value}
               status={error && "error"}
               placeholder={placeholder}
+              {...rest}
             />
             {error && (
               <p className="text-sm font-normal text-red-500">

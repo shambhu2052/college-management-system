@@ -2,10 +2,34 @@ import { useForm } from "react-hook-form";
 import AppInput from "../components/form/AppInput";
 import AppPassword from "../components/form/AppPassword";
 import { Button } from "antd";
-
+import { useQuery } from "@tanstack/react-query";
+import { getUser } from "../api/get";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { loginSchema } from "../schema";
+import type z from "zod";
+import { useToastMessage } from "../context/ToastMessage";
+import { useAuth } from "../context/AuthProvider";
+import { useNavigate } from "react-router-dom";
+type FormType = z.infer<typeof loginSchema>;
 export default function Login() {
-  const { control, handleSubmit } = useForm();
-  const onSubmit = () => {};
+  const { messageApi } = useToastMessage();
+  const navigate = useNavigate();
+  const { setIsAuth } = useAuth();
+  const { control, handleSubmit } = useForm<FormType>({
+    mode: "onChange",
+    resolver: zodResolver(loginSchema),
+  });
+  const { data: userList } = useQuery({ queryKey: ["user"], queryFn: getUser });
+  const onSubmit = (data: FormType) => {
+    const isValidPassword = userList?.find(
+      (item: { password: string }) => item?.password == data?.password
+    );
+    if (isValidPassword) {
+      messageApi.success("Login successfully");
+      navigate("/app/dashboard");
+      setIsAuth(true);
+    }
+  };
   return (
     <div className="flex min-h-screen ">
       <div
